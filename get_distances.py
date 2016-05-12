@@ -8,6 +8,5 @@ for dest, city in enumerate(cities):
 	data = json.loads(response.read())
 	for source, row in enumerate(data["rows"]):
 		dist_mat[source][dest] = (row["elements"][0])["distance"]["value"]
-		print source, ",", dest, "->", (row["elements"][0])["distance"]["text"]
-	time.sleep(11)
+	time.sleep(11)	#Limitation of google maps api
 print dist_mat
